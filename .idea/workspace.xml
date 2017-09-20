@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb021112-c573-46ba-a1c0-ad3294ca51f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/fsdcic/xjh/mongo/entity/BaseEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/fsdcic/xjh/mongo/entity/ServiceResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/fsdcic/xjh/mongo/entity/SpringDataPageable.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/fsdcic/mongo/dao/MongoBase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/fsdcic/mongo/dao/SysLogDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/fsdcic/mongo/dao/impl/SysLogDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/fsdcic/mongo/entity/SysLog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/fsdcic/mongo/dao/MongoBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/fsdcic/mongo/dao/SysLogDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/fsdcic/mongo/dao/impl/SysLogDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/fsdcic/mongo/entity/SysLog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/fsdcic/mongo/template/MongoSpringTest.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/MongoSpringTest.class" afterPath="$PROJECT_DIR$/target/test-classes/MongoSpringTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mangodbService.iml" afterPath="$PROJECT_DIR$/mangodbService.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.xml" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MongoSpringTest.java" afterPath="$PROJECT_DIR$/src/test/java/MongoSpringTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.xml" afterPath="$PROJECT_DIR$/target/classes/application.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_10_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_10_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_10_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_10_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_10_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_9_RELEASE.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,8 +37,8 @@
       <file leaf-file-name="MongoSpringTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/MongoSpringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="165" column="23" lean-forward="true" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
+            <state relative-caret-position="375">
+              <caret line="166" column="5" lean-forward="true" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1041,7 +1015,7 @@
       <workItem from="1505813561870" duration="708000" />
       <workItem from="1505814305624" duration="2572000" />
       <workItem from="1505817204408" duration="6573000" />
-      <workItem from="1505880007561" duration="14099000" />
+      <workItem from="1505880007561" duration="14193000" />
     </task>
     <task id="LOCAL-00001" summary="1、新建log实体类&#10;2、完成基础的MongoDB增删改查操作">
       <created>1505471642113</created>
@@ -1050,7 +1024,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505471642113</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1、完成对mongodb的base操作：sercice、dao&#10;2、泛型的实现&#10;3、完成方法测试">
+      <created>1505902726159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505902726159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1086,7 +1067,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61626000" />
+    <option name="totallyTimeSpent" value="61720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1136,7 +1117,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1、新建log实体类&#10;2、完成基础的MongoDB增删改查操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、新建log实体类&#10;2、完成基础的MongoDB增删改查操作" />
+    <MESSAGE value="1、完成对mongodb的base操作：sercice、dao&#10;2、泛型的实现&#10;3、完成方法测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、完成对mongodb的base操作：sercice、dao&#10;2、泛型的实现&#10;3、完成方法测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1766,8 +1748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MongoSpringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="165" column="23" lean-forward="true" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
+        <state relative-caret-position="375">
+          <caret line="166" column="5" lean-forward="true" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
