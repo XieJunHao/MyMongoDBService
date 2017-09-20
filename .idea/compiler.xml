@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mangodbService" />
+        <module name="common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="common" target="1.5" />
       <module name="mangodbService" target="1.5" />
+      <module name="MyCommon" target="1.5" />
+      <module name="orgfsdcicxjhcommn" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -6,9 +6,16 @@
 
     <groupId>org.fsdcic.xjh</groupId>
     <artifactId>org.fsdcic.xjh</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+
     <dependencies>
+        <!--<dependency>-->
+            <!--<artifactId>org.fsdcic.xjh</artifactId>-->
+            <!--<groupId>org.fsdcic.xjh</groupId>-->
+        <!--</dependency>-->
+
         <!--mongodb 操作驱动-->
         <dependency>
             <groupId>org.mongodb</groupId>
@@ -17,6 +24,11 @@
         </dependency>
 
         <!--Spring-data框架-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.9.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
@@ -36,6 +48,12 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.1.4.RELEASE</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

@@ -1,17 +1,33 @@
 import com.mongodb.DB;
 import com.mongodb.Mongo;
-import org.fsdcic.mongo.dao.SysLogDao;
-import org.fsdcic.mongo.entity.SysLog;
+import org.fsdcic.xjh.mongo.dao.SysLogDao;
+import org.fsdcic.xjh.mongo.entity.OperationLog;
+import org.fsdcic.xjh.mongo.entity.ServiceResult;
+import org.fsdcic.xjh.mongo.entity.SysLog;
+import org.fsdcic.xjh.mongo.service.impl.MongoBaseServiceImpl;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by ben on 2017-9-15.
  */
-public class MongoSpringTest {
+@ContextConfiguration(locations = "classpath:application.xml")
+public class MongoSpringTest extends AbstractJUnit4SpringContextTests {
 
 
 //  测试连接mongodb数据库
@@ -38,6 +54,9 @@ public class MongoSpringTest {
     private static  ClassPathXmlApplicationContext  app;
     private static String collectionName;
 
+
+
+
 //    执行每一个测试方法前，都要跑一次
 //    @Before
     //针对所有测试方法，只执行一次，且必须为static void
@@ -58,61 +77,92 @@ public class MongoSpringTest {
     public void testAdd()
     {
 
-        //添加一百个user
-//        for(int i=0;i<100;i++){
+//        //添加一百个user
+//        for(int i=0;i<10;i++){
 //            SysLog sysLog =new SysLog();
-//            sysLog.setId(i);
-//            sysLog.setIp("192.168.0."+i);
-//            sysLog.setUserName("测试"+i);
-//            sysLog.setContent("测试内容"+i);
-//            List<String> tables = new ArrayList<String>();
-//            tables.add("这是第一张表单");
-//            tables.add("这是第二张表单");
-//            sysLog.setTableMessage(tables);
+////            sysLog.setId(i+"");
+//            sysLog.setCallIp("192.168.0.");
+//            sysLog.setReceiveTime(new Date());
+////            sysLog.setContent("测试内容"+i);
+////            List<String> tables = new ArrayList<String>();
+////            tables.add("这是第一张表单");
+////            tables.add("这是第二张表单");
+////            sysLog.setTableMessage(tables);
 //            sysLogDaoImpl.insert(sysLog,collectionName);
 //        }
-        Map<String,Object> params=new HashMap<String,Object>();
-        params.put("id", 50);
-        List<SysLog> list=sysLogDaoImpl.findAll(params,collectionName);
-        System.out.println("查询到的列表"+list.size());
+//        Map<String,Object> params=new HashMap<String,Object>();
+//        params.put("id", 1);
+        //        params.put("userName","测试3");
+//        SysLog sysLog = sysLogDaoImpl.findOne(3+"",collectionName);
+//        Assert.assertNotNull(sysLog);
+//        System.out.println(sysLog.getContentData()+" "+sysLog.getId());
+
+//        Map<String,Object> params2=new HashMap<String,Object>();
+//        params2.put("_id", 0);
+//        params2.put("ip", "192.168.0.3");
+//        Map<String ,Map<String,Object>> findAllMap = new HashMap<String, Map<String, Object>>();
+////        findAllMap.put("$and",params2);
+//        findAllMap.put("$or",params2);
+//        List<SysLog> list=sysLogDaoImpl.findAll(findAllMap,collectionName);
+//        System.out.println("查询到的列表"+list.size());
     }
 
 
 
-//    @Autowired
-//    private MongoTemplate mongoTemplate;
-//    @Before
-//    public void  BeforeTest(){
-//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
-//        mongoTemplate= (MongoTemplate) context.getBean("mongoTemplate");
-//    }
-//    /**
-//     * 插入日志信息
-//     */
-//    @Test
-//    public void testAddUser() {
-//        SysLog sysLog = new SysLog();
-//        sysLog.setUserName("太极");
-//        sysLog.setIp("192.168.1.1");
-//        sysLog.setContent("法人一门式业务受理");
-//        List<String> tables = new ArrayList<String>();
-//        tables.add("这是第一张表单");
-//        tables.add("这是第二张表单");
-//        sysLog.setTableMessage(tables);
-//
-//        // 插入数据
-//        mongoTemplate.insert(sysLog);
-//    }
-//
-//    @Test
-//    public void testFind3() {
-//        Criteria cri = Criteria.where("$gt").is(90).and("$lt").is(100);
-//        Query query = new Query(Criteria.where("score").elemMatch(cri));
-//        query.fields().include("score");
-//        List<SysLog> sysLogs = mongoTemplate.find(query, SysLog.class);
-//        for(SysLog sysLoglist : sysLogs) {
-//            System.out.println(sysLogs.toString());
-//        }
-//    }
+    @Autowired
+    MongoBaseServiceImpl mongoBaseService;
 
+    @Test
+    public void testRemove(){
+        List<String> ids = new ArrayList<String>();
+//        for(int i=0;i<10;i++){
+//            ids.add(i+"");
+//        }
+        ids.add("59c0ea18ca111a03845e2e36");
+        ids.add("59c1b9d8ca111a3794ebdc56");
+        ServiceResult serviceResult = mongoBaseService.deleteByids(ids,OperationLog.class,"SysLog");
+        System.out.print(serviceResult.getMessage());
+    }
+
+    @Test
+    public void testSave(){
+        SysLog sysLog = new SysLog();
+        sysLog.setContentData("测试service泛型,id自增");
+//        mongoBaseService.save(null,sysLog,collectionName);
+        OperationLog operationLog = new OperationLog();
+        operationLog.setUserName("測試插入返回值");
+        operationLog.setId("12345");
+        mongoBaseService.save(operationLog,"OperationLog");
+
+    }
+
+    @Test
+    public void testFind(){
+       ServiceResult serviceResult = mongoBaseService.findOne("1",SysLog.class,"SysLog",true);
+       serviceResult.getMessage();
+    }
+
+    @Test
+    public void testUpdate(){
+        Update update = new Update().set("userName", "测试更新");
+        update.set("ip2","测试当不存在字段时，进行更新5");
+        mongoBaseService.updateById("59c2320fca111a3f34106ad1",update,OperationLog.class,"OperationLog");
+    }
+
+    @Test
+    public void testFindPageData(){
+        Query query = new Query(Criteria.where("id").lt("2"));
+
+        int pageNumber =1;
+        int pageSize = 5;
+        String sord="desc";
+        String sort="id";
+        //生成Sort变量
+        Sort sort1 =  new Sort(Sort.Direction.DESC, "id");
+        //生成Pageable变量
+        Pageable pageable = new PageRequest(pageNumber - 1, pageSize, sort1);
+
+        PageImpl page = (PageImpl) mongoBaseService.findPageData(query,pageable,OperationLog.class,"SysLog").getData();
+        page.getSize();
+    }
 }
