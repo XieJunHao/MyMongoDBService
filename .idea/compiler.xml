@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="testClient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -14,6 +15,7 @@
       <module name="mangodbService" target="1.5" />
       <module name="MyCommon" target="1.5" />
       <module name="orgfsdcicxjhcommn" target="1.5" />
+      <module name="testClient" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

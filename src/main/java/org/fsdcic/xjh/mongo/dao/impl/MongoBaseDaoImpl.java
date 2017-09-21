@@ -4,13 +4,12 @@ import com.mongodb.WriteResult;
 import org.fsdcic.xjh.mongo.dao.MongoBaseDao;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -19,8 +18,11 @@ import java.util.List;
 @Repository("mongoBaseDaoImpl")
 public class MongoBaseDaoImpl<T> implements MongoBaseDao {
 
-    @Resource
-    private MongoTemplate mongoTemplate;
+    private MongoOperations mongoTemplate;
+
+    public MongoBaseDaoImpl(MongoOperations mongoOperations) {
+        this.mongoTemplate = mongoOperations;
+    }
 
     public MongoBaseDao getDao() {
         return this;

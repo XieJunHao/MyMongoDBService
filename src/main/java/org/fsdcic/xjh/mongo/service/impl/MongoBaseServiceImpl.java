@@ -2,27 +2,34 @@ package org.fsdcic.xjh.mongo.service.impl;
 
 import com.mongodb.WriteResult;
 import org.fsdcic.xjh.mongo.dao.MongoBaseDao;
+import org.fsdcic.xjh.mongo.dao.impl.MongoBaseDaoImpl;
 import org.fsdcic.xjh.mongo.entity.BaseEntity;
 import org.fsdcic.xjh.mongo.entity.ServiceResult;
 import org.fsdcic.xjh.mongo.service.MongoBaseService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * Created by ben on 2017-9-19.
  */
+@Service
 public class MongoBaseServiceImpl<T extends BaseEntity> implements MongoBaseService {
 
     private final MongoBaseDao mongoBaseDao;
 
-    @Autowired
-    public MongoBaseServiceImpl(MongoBaseDao mongoBaseDao) {
-        this.mongoBaseDao = mongoBaseDao;
+//    @Autowired
+//    public MongoBaseServiceImpl(MongoBaseDao mongoBaseDao) {
+//        this.mongoBaseDao = mongoBaseDao;
+//    }
+
+    public MongoBaseServiceImpl(MongoOperations mongoOperations) {
+        this.mongoBaseDao = new MongoBaseDaoImpl(mongoOperations);
     }
 
     /**

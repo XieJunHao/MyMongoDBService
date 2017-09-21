@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../MyCommon/common.iml" filepath="$PROJECT_DIR$/../MyCommon/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/mangodbService.iml" filepath="$PROJECT_DIR$/mangodbService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MyTestClient/testClient.iml" filepath="$PROJECT_DIR$/../MyTestClient/testClient.iml" />
     </modules>
   </component>
 </project>
