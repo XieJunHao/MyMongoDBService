@@ -12,26 +12,5 @@
 
     <context:component-scan base-package="org.fsdcic.xjh.mongo.*" />
     <!-- 获取配置资源 -->
-    <context:property-placeholder location="classpath:mongodb-context-config.properties" />
-
-
-    <mongo:mongo-client id="mongo" host="${mongo.host}" port="${mongo.port}" >
-        <mongo:client-options
-                connections-per-host="${mongo.connectionsPerHost}"
-                threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"
-                connect-timeout="${mongo.connectTimeout}"
-                max-wait-time="${mongo.maxWaitTime}"
-
-                socket-keep-alive="${mongo.socketKeepAlive}"
-                socket-timeout="${mongo.socketTimeout}"
-
-        />
-    </mongo:mongo-client>
-    <!-- 设置使用的数据库名-->
-    <mongo:db-factory dbname="test" mongo-ref="mongo"/>
-    <!-- mongodb的模板 -->
-    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
-    </bean>
 
 </beans>
