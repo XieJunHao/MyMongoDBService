@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mangodbService.iml" filepath="$PROJECT_DIR$/mangodbService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.fsdcic.xjh.iml" filepath="$PROJECT_DIR$/org.fsdcic.xjh.iml" />
       <module fileurl="file://$PROJECT_DIR$/../MyTestClient/testClient.iml" filepath="$PROJECT_DIR$/../MyTestClient/testClient.iml" />
     </modules>
   </component>

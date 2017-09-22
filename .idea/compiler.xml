@@ -14,6 +14,7 @@
       <module name="common" target="1.5" />
       <module name="mangodbService" target="1.5" />
       <module name="MyCommon" target="1.5" />
+      <module name="org.fsdcic.xjh" target="1.5" />
       <module name="orgfsdcicxjhcommn" target="1.5" />
       <module name="testClient" target="1.5" />
     </bytecodeTargetLevel>
