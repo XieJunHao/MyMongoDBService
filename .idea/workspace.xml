@@ -7,15 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb021112-c573-46ba-a1c0-ad3294ca51f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyTestClient/pom.xml" afterPath="$PROJECT_DIR$/../MyTestClient/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyTestClient/src/main/java/org/fsdcic/xjh/mongoClient/service/impl/SysLogServiceImpl.java" afterPath="$PROJECT_DIR$/../MyTestClient/src/main/java/org/fsdcic/xjh/mongoClient/service/impl/SysLogServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyTestClient/src/main/resources/application.xml" afterPath="$PROJECT_DIR$/../MyTestClient/src/main/resources/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyTestClient/src/test/java/MongoSpringTest.java" afterPath="$PROJECT_DIR$/../MyTestClient/src/test/java/MongoSpringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyTestClient/testClient.iml" afterPath="$PROJECT_DIR$/../MyTestClient/testClient.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -979,7 +971,7 @@
       <workItem from="1505813561870" duration="708000" />
       <workItem from="1505814305624" duration="2572000" />
       <workItem from="1505817204408" duration="6573000" />
-      <workItem from="1505880007561" duration="26580000" />
+      <workItem from="1505880007561" duration="26601000" />
     </task>
     <task id="LOCAL-00001" summary="1、新建log实体类&#10;2、完成基础的MongoDB增删改查操作">
       <created>1505471642113</created>
@@ -1009,7 +1001,21 @@
       <option name="project" value="LOCAL" />
       <updated>1505988059516</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1、完成对mongodb的base操作：sercice、dao&#10;2、泛型的实现&#10;3、完成方法测试">
+      <created>1506074735136</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1506074735136</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1、完成对mongodb的base操作：sercice、dao&#10;2、泛型的实现&#10;3、完成方法测试">
+      <created>1506074743952</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1506074743952</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1045,10 +1051,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74107000" />
+    <option name="totallyTimeSpent" value="74128000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
